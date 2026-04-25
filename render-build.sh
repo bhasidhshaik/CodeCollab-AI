@@ -7,28 +7,11 @@ node --version
 echo "=== Installing pnpm ==="
 npm install -g pnpm
 
-echo "=== Installing server deps with npm ==="
-cd apps/server
+echo "=== Installing all dependencies ==="
+pnpm install --no-frozen-lockfile
 
-echo "=== Removing workspace protocol ==="
-node -e "
-const fs = require('fs');
-const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-delete pkg.dependencies['@codex/types'];
-fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
-console.log('Removed workspace dep');
-"
-
-echo "=== Installing including devDependencies ==="
-npm install --legacy-peer-deps --include=dev 2>&1
-
-echo "=== Copying types ==="
-mkdir -p node_modules/@codex/types
-cp -r ../../packages/types/* node_modules/@codex/types/
-
-echo "=== Building ==="
-./node_modules/.bin/tsc -p tsconfig.prod.json 2>&1
-./node_modules/.bin/tsc-alias -p tsconfig.prod.json 2>&1
+echo "=== Building server ==="
+pnpm --filter server build
 
 echo "=== Done ==="
-ls -la dist/
+ls -la apps/server/dist/
