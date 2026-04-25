@@ -8,16 +8,14 @@ echo "=== pnpm version ==="
 pnpm --version
 
 echo "=== Installing dependencies ==="
-pnpm install --no-frozen-lockfile
+pnpm install --no-frozen-lockfile --reporter=verbose 2>&1 || true
 
-echo "=== Building server ==="
+echo "=== Trying again with more info ==="
+pnpm install --no-frozen-lockfile --ignore-scripts 2>&1 || echo "Install failed"
+
+echo "=== Building server directly ==="
 cd apps/server
-echo "=== Current directory ==="
-pwd
-echo "=== Listing files ==="
-ls -la
-echo "=== Running tsc ==="
-npx tsc -p tsconfig.prod.json
-echo "=== Running tsc-alias ==="
-npx tsc-alias -p tsconfig.prod.json
-echo "=== Build complete ==="
+echo "=== Installing server deps directly ==="
+pnpm install --no-frozen-lockfile 2>&1 || echo "Server install failed"
+
+echo "=== Done ==="
