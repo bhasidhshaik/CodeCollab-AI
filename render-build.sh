@@ -28,8 +28,12 @@ echo "=== tsc version ==="
 ./node_modules/.bin/tsc --version
 
 echo "=== Build ==="
-./node_modules/.bin/tsc -p tsconfig.prod.json
-./node_modules/.bin/tsc-alias -p tsconfig.prod.json
+./node_modules/.bin/tsc -p tsconfig.prod.json --listEmittedFiles 2>&1
+./node_modules/.bin/tsc-alias -p tsconfig.prod.json 2>&1
+
+echo "=== Check dist ==="
+ls -la dist/ || echo "dist folder not created!"
+ls -la .
 
 echo "=== Done ==="
 ls -la dist/
