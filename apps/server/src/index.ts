@@ -41,7 +41,7 @@ const httpServer = createServer((req, res) => {
     }
     res.setHeader("Content-Type", "text/plain");
     res.end(
-      "Hello from codex-server! Go to https://codex.bhasidhshaik.dev/ to start coding."
+      "Hello from CollabeCode-server! Go to https://collab-code-ai.vercel.app/ to start coding."
     );
   }
 });

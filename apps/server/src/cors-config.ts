@@ -1,29 +1,17 @@
-/**
- * CORS configuration for server request handling.
- * Features:
- * - Origin validation
- * - Vercel deployment detection
- * - Header generation
- *
- * By Shaik Bhasidh (https://bhasidhshaik.dev)
- */
-
 const ALLOWED_ORIGINS = [
-  "https://codex.bhasidhshaik.dev",
-  "https://codex.vercel.app",
-  "https://dev-codex.bhasidhshaik.dev",
+  "https://collab-code-ai.vercel.app",
+  "https://codecollab-ai-server.onrender.com",
   "http://localhost:3000",
 ] as const;
 
 const VERCEL_DEPLOYMENT_PATTERN =
-  /^https:\/\/codex-client-[a-zA-Z0-9]+-[a-zA-Z0-9-]+\.vercel\.app$/;
+  /^https:\/\/collab-code-ai-[a-zA-Z0-9]+-[a-zA-Z0-9-]+\.vercel\.app$/;
 
 const isVercelDeployment = (origin: string): boolean => {
   return VERCEL_DEPLOYMENT_PATTERN.test(origin);
 };
 
 const getAllowedOrigin = (origin: string | undefined): string => {
-  // For security, avoid returning '*' in production
   if (process.env.NODE_ENV === "production" && !origin) {
     return ALLOWED_ORIGINS[0];
   }
