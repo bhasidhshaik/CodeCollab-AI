@@ -1,16 +1,23 @@
 #!/usr/bin/env bash
 set -e
 
-# Install pnpm
+echo "=== Installing pnpm ==="
 npm install -g pnpm
 
-# Install all workspace dependencies including devDependencies
+echo "=== pnpm version ==="
+pnpm --version
+
+echo "=== Installing dependencies ==="
 pnpm install --no-frozen-lockfile
 
-# Install rimraf directly in server directory
+echo "=== Building server ==="
 cd apps/server
-npx rimraf dist
-cd ../..
-
-# Build only the server
-pnpm --filter server build
+echo "=== Current directory ==="
+pwd
+echo "=== Listing files ==="
+ls -la
+echo "=== Running tsc ==="
+npx tsc -p tsconfig.prod.json
+echo "=== Running tsc-alias ==="
+npx tsc-alias -p tsconfig.prod.json
+echo "=== Build complete ==="
