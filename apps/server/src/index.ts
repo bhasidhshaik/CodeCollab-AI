@@ -1,15 +1,4 @@
-/**
- * Socket.IO server entry point for CodeX.
- * Features:
- * - WebSocket server setup
- * - Service initialization
- * - Message handling
- * - CORS configuration
- *
- * By Shaik Bhasidh (https://bhasidhshaik.dev)
- */
-
-import { App } from "uWebSockets.js";
+import { createServer } from "http";
 import {
   CodeServiceMsg,
   PointerServiceMsg,
@@ -41,18 +30,29 @@ import {
   isVercelDeployment,
 } from "./cors-config";
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
-const app = App();
+const httpServer = createServer((req, res) => {
+  if (req.url === "/") {
+    const origin = req.headers.origin || "";
+    const headers = getCorsHeaders(origin);
+    for (const [key, value] of Object.entries(headers)) {
+      res.setHeader(key, value);
+    }
+    res.setHeader("Content-Type", "text/plain");
+    res.end(
+      "Hello from codex-server! Go to https://codex.bhasidhshaik.dev/ to start coding."
+    );
+  }
+});
 
-const io = new Server<ClientToServerEvents, ServerToClientEvents>({
+const io = new Server<ClientToServerEvents, ServerToClientEvents>(httpServer, {
   cors: {
     origin: (origin, callback) => {
       if (process.env.NODE_ENV === "development") {
         callback(null, true);
         return;
       }
-
       if (
         !origin ||
         ALLOWED_ORIGINS.includes(origin as (typeof ALLOWED_ORIGINS)[number]) ||
@@ -63,42 +63,19 @@ const io = new Server<ClientToServerEvents, ServerToClientEvents>({
         callback(new Error("Origin not allowed"));
       }
     },
-    methods: ["GET", "POST"], // Socket.IO needs both
+    methods: ["GET", "POST"],
     credentials: true,
   },
   transports: ["websocket", "polling"],
-  // Allow larger payloads for pasting large code blocks (default is 1MB)
-  maxHttpBufferSize: 5e6, // 5MB
-  // Recover socket state (rooms, missed packets) after brief disconnects
+  maxHttpBufferSize: 5e6,
   connectionStateRecovery: {
-    maxDisconnectionDuration: 2 * 60 * 1000, // 2 minutes
+    maxDisconnectionDuration: 2 * 60 * 1000,
     skipMiddlewares: true,
   },
 });
-io.attachApp(app);
-io.engine.on("connection", (rawSocket) => {
-  rawSocket.request = null;
-});
 
-app.listen(PORT, (token) => {
-  if (!token) {
-    console.warn(`Port ${PORT} is already in use`);
-  }
+httpServer.listen(PORT, () => {
   console.log(`codex-server listening on port: ${PORT}`);
-});
-
-app.get("/", (res, req) => {
-  const origin = req.getHeader("origin");
-  const headers = getCorsHeaders(origin);
-
-  for (const [key, value] of Object.entries(headers)) {
-    res.writeHeader(key, value);
-  }
-  res.writeHeader("Content-Type", "text/plain");
-
-  res.end(
-    "Hello from codex-server! Go to https://codex.bhasidhshaik.dev/ to start coding."
-  );
 });
 
 io.on("connection", (socket) => {
