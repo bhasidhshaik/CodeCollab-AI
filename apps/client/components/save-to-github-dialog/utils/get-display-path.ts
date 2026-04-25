@@ -1,12 +1,3 @@
-/**
- * Utility function for constructing GitHub repository display paths.
- * Features:
- * - Repository path construction
- * - Branch path handling
- * - Directory/file path handling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import {
   type ExtendedTreeDataItem,

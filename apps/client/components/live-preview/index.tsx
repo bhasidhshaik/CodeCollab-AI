@@ -1,13 +1,3 @@
-/**
- * Live preview component that renders HTML in a lightweight iframe.
- * Features:
- * - Real-time preview updates
- * - Tailwind CSS support
- * - Theme-aware rendering
- * - Pre-installed CDN libraries cached by the browser
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 import { DISABLE_TAILWIND_CDN_WARN, PREVIEW_CDN } from "@/lib/constants";
 
 import { HelpPopover } from "./components/help-popover";

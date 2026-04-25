@@ -2,7 +2,7 @@
  * Tests for measuring cursor synchronization latency in collaborative editing.
  * Tests both simple cursor movements and selection operations.
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 
 import fs from "node:fs";

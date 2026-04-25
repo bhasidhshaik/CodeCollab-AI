@@ -1,8 +1,3 @@
-/**
- * Webcam streaming component that enables video/audio communication.
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { User } from "@codex/types/user";
 

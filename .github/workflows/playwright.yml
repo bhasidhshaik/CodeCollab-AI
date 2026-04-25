@@ -1,12 +1,4 @@
-# GitHub Actions workflow for running Playwright end-to-end tests
-# Features:
-# - Automated testing on push/PR
-# - Environment setup
-# - Test execution
-# - Results reporting
-# - Deployment trigger
-#
-# By Dulapah Vibulsanti (https://dulapahv.dev)
+
 
 name: 🎭 Playwright Tests
 permissions:

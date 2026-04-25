@@ -1,12 +1,3 @@
-/**
- * Monaco editor cursor management utilities.
- * Features:
- * - Multi-user cursor tracking
- * - Viewport line visibility checks
- * - Cursor style handling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Cursor } from "@codex/types/operation";
 

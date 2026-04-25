@@ -1,13 +1,3 @@
-/**
- * Editor configuration component for Monaco editor settings.
- * Features:
- * - Settings search and filtering
- * - Import/export settings
- * - Real-time setting updates
- * - Settings persistence
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Monaco } from "@monaco-editor/react";
 import { Download, Folder, Search } from "lucide-react";

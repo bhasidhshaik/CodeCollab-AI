@@ -1,12 +1,3 @@
-/**
- * Test utility functions for setting up collaborative editing rooms.
- * Features:
- * - Room creation helper
- * - Room joining helper
- * - Join verification
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { expect, type Page } from "@playwright/test";
 

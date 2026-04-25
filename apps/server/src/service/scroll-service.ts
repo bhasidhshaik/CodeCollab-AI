@@ -5,7 +5,7 @@
  * - User identification
  * - Socket messaging
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 
 import { ScrollServiceMsg } from "@codex/types/message";

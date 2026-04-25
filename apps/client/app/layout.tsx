@@ -1,17 +1,8 @@
-/**
- * Root layout component that wraps all pages.
- * Provides global configuration and providers including:
- * - Fonts (Geist Sans and Mono)
- * - Metadata and SEO settings
- * - Theme provider
- * - Toast notifications
- * - Analytics
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
+
 
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@/components/analytics";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -28,6 +19,18 @@ import {
 import "./globals.css";
 
 // export const runtime = 'edge';
+import { DM_Sans, DM_Mono } from "next/font/google";
+
+const dmSans = DM_Sans({
+  variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const dmMono = DM_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -61,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    creator: "@dulapahv",
+    creator: "@bhasidhshaik",
   },
   alternates: {
     canonical: BASE_CLIENT_URL,
@@ -80,7 +83,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      className={`${dmSans.variable} ${dmMono.variable}`}
       lang="en"
       suppressHydrationWarning
     >

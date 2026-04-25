@@ -1,12 +1,3 @@
-/**
- * Device controls component for managing media devices.
- * Features:
- * - Device selection dropdown
- * - Enable/disable toggle
- * - Permission handling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { type ElementType, useCallback, useState } from "react";
 

@@ -1,13 +1,3 @@
-/**
- * GitHub API route handler for fetching repository resources.
- * Provides:
- * - Branch listing
- * - File/directory contents
- * - Authentication validation
- * - Error handling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { cookies } from "next/headers";
 import type { NextRequest } from "next/server";

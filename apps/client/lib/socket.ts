@@ -1,12 +1,3 @@
-/**
- * Socket client configuration for real-time communication.
- * Features:
- * - Socket.IO connection setup
- * - Server URL configuration
- * - Connection management
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type {
   ClientToServerEvents,

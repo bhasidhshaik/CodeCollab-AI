@@ -1,12 +1,3 @@
-/**
- * Theme provider component that enables dark/light mode support.
- * Features:
- * - System theme detection
- * - Theme persistence
- * - Theme switching
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 "use client";
 

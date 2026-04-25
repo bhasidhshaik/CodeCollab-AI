@@ -1,13 +1,3 @@
-/**
- * Configuration constants for environment, URLs, OAuth and application settings.
- * Features:
- * - Environment detection
- * - API endpoint URLs
- * - OAuth credentials
- * - App metadata
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 export const IS_DEV_ENV =
   process.env.VERCEL_ENV === "development" ||
@@ -16,12 +6,12 @@ export const IS_DEV_ENV =
 
 export const BASE_CLIENT_URL = IS_DEV_ENV
   ? "http://localhost:3000"
-  : "https://codex.dulapahv.dev";
+  : "https://codex.bhasidhshaik.dev";
 export const BASE_SERVER_URL = IS_DEV_ENV
   ? "http://localhost:3001"
-  : "https://codex-server.dulapahv.dev";
+  : "https://codex-server.bhasidhshaik.dev";
 
-export const STATUS_URL = "https://codex-status.dulapahv.dev";
+export const STATUS_URL = "https://codex-status.bhasidhshaik.dev";
 export const KASCA_SERVER_MONITOR_ID = "2887417";
 
 export const GITHUB_API_URL = "https://api.github.com";
@@ -37,7 +27,7 @@ export const PISTON_API_URL = "https://emkc.org/api/v2/piston/execute";
 
 export const NAME_MAX_LENGTH = 64;
 
-export const SITE_NAME = "CodeX - Code Collaboration Platform";
+export const SITE_NAME = "CodeCollab AI - Code Collaboration Platform";
 export const SITE_DESCRIPTION =
   "Your collaborative coding space, reimagined. Code together now on CodeX, no sign-up required.";
 export const INVITED_DESCRIPTION =
@@ -48,11 +38,11 @@ export const LATENCY_TEST_DESCRIPTION =
 export const GITHUB_OAUTH_TITLE = "GitHub OAuth Callback";
 export const GITHUB_OAUTH_DESCRIPTION =
   "This page is used to handle the GitHub OAuth callback.";
-export const NAME = "Dulapah Vibulsanti";
-export const PORTFOLIO_URL = "https://dulapahv.dev";
-export const CONTACT_URL = "https://dulapahv.dev/contact";
-export const REPO_URL = "https://github.com/dulapahv/codex";
-export const GITHUB_URL = "https://github.com/dulapahv";
+export const NAME = "Shaik Bhasidh";
+export const PORTFOLIO_URL = "https://shaik-bhasidh.vercel.app/";
+export const CONTACT_URL = "https://shaik-bhasidh.vercel.app/contact";
+export const REPO_URL = "https://github.com/bhasidhshaik/codex";
+export const GITHUB_URL = "https://github.com/bhasidhshaik";
 
 export const EDITOR_SETTINGS_KEY = "editor-settings";
 

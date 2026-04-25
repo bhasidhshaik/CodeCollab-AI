@@ -1,13 +1,3 @@
-/**
- * Shared menu item component used in both desktop and mobile menu toolbars.
- * Features:
- * - Regular menu items
- * - Checkbox menu items
- * - Menu separators
- * - Keyboard shortcuts
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import {
   MenubarCheckboxItem,

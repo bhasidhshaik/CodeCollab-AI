@@ -1,13 +1,3 @@
-/**
- * Animated grid background component with parallax effect and moving lights.
- * Features:
- * - Responsive grid layout
- * - Animated light trails
- * - Mouse-based parallax
- * - Dynamic sizing
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 "use client";
 

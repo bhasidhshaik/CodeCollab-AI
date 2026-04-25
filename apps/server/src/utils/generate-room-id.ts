@@ -5,7 +5,7 @@
  * - Alphanumeric characters
  * - Uppercase letters only
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 
 export const generateRoomID = () => {

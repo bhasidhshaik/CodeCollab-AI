@@ -1,12 +1,3 @@
-/**
- * Common utility functions used across the application.
- * Features:
- * - Room management
- * - CSS class merging
- * - Error parsing
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { RoomServiceMsg } from "@codex/types/message";
 import { type ClassValue, clsx } from "clsx";

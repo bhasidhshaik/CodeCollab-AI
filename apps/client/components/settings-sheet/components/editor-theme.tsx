@@ -1,12 +1,3 @@
-/**
- * Editor theme selector component that manages Monaco editor themes.
- * Features:
- * - Theme synchronization with system/user preference
- * - Theme preview with CSS variable updates
- * - Theme persistence
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Monaco } from "@monaco-editor/react";
 import { Check, ChevronsUpDown } from "lucide-react";

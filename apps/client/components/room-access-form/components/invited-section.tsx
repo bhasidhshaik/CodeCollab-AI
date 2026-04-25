@@ -1,13 +1,3 @@
-/**
- * Room joining form section component for invited users.
- * Features:
- * - Name input validation
- * - Submit handling
- * - Loading states
- * - Error display
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import * as Form from "@radix-ui/react-form";
 import { ArrowRight } from "lucide-react";

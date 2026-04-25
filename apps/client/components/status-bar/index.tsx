@@ -1,12 +1,3 @@
-/**
- * Status bar component that displays editor information.
- * Features:
- * - Current language display
- * - Cursor position tracking
- * - Selection feedback
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Monaco } from "@monaco-editor/react";
 import { Languages } from "lucide-react";

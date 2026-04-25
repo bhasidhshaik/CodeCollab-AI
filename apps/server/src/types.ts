@@ -1,7 +1,7 @@
 /**
  * Typed Socket.IO server types for compile-time event safety.
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 
 import type {

@@ -1,9 +1,3 @@
-/**
- * GitHub footer information component.
- * Displays file path and disconnect instructions.
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { Settings } from "lucide-react";
 

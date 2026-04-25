@@ -1,12 +1,3 @@
-/**
- * Utility functions for editor settings management.
- * Features:
- * - Settings export to JSON
- * - Title case formatting
- * - Settings file handling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type * as monaco from "monaco-editor";
 import type { ChangeEvent } from "react";

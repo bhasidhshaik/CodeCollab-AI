@@ -1,13 +1,3 @@
-/**
- * Run button component for code execution control.
- * Features:
- * - Code execution triggering
- * - Execution cancellation
- * - Args/stdin input handling
- * - Status indication
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { CodeServiceMsg } from "@codex/types/message";
 import type { ExecutionResult } from "@codex/types/terminal";

@@ -492,7 +492,7 @@ export default function Room() {
             role="region"
           >
             <AiChat
-              code={code}
+              code={code ?? defaultCode}
               language={editor?.getModel()?.getLanguageId()}
             />
           </ResizablePanel>

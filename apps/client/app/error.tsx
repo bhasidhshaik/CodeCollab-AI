@@ -1,12 +1,3 @@
-/**
- * Error boundary component for handling runtime errors.
- * Features:
- * - Error reporting
- * - Recovery options
- * - Development error details
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 "use client";
 

@@ -1,12 +1,3 @@
-/**
- * Utility functions for calculating latency test statistics.
- * Provides calculations for:
- * - Min/max/average values
- * - Median
- * - Standard deviation
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Stats } from "./types";
 

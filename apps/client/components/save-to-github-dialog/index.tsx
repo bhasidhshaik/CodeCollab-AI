@@ -1,8 +1,3 @@
-/**
- * GitHub save dialog component that handles file saving integration.
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import * as Form from "@radix-ui/react-form";
 import type * as monaco from "monaco-editor";

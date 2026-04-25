@@ -1,9 +1,3 @@
-/**
- * Video grid component that displays local and remote video streams.
- * Renders video elements with user avatars and control overlays.
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { User } from "@codex/types/user";
 import type { RefObject } from "react";

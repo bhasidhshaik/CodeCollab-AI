@@ -6,7 +6,7 @@
  * - Message handling
  * - CORS configuration
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 
 import { App } from "uWebSockets.js";
@@ -97,7 +97,7 @@ app.get("/", (res, req) => {
   res.writeHeader("Content-Type", "text/plain");
 
   res.end(
-    "Hello from codex-server! Go to https://codex.dulapahv.dev/ to start coding."
+    "Hello from codex-server! Go to https://codex.bhasidhshaik.dev/ to start coding."
   );
 });
 

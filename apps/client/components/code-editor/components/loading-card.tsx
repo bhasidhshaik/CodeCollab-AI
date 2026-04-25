@@ -1,12 +1,3 @@
-/**
- * Loading overlay component shown while editor initializes.
- * Features:
- * - Centered alert with spinner
- * - Blurred backdrop
- * - Description message
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { memo } from "react";
 import { Spinner } from "@/components/spinner";

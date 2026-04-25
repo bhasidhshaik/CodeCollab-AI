@@ -1,13 +1,3 @@
-/**
- * Editor theme utility that manages Monaco editor themes.
- * Features:
- * - Theme initialization and persistence
- * - Theme application to editor and UI
- * - CSS variable handling for consistent theming
- * - System/dark mode synchronization
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Monaco } from "@monaco-editor/react";
 import themeList from "monaco-themes/themes/themelist.json";

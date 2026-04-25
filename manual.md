@@ -86,7 +86,7 @@
 CodeX is a web-based application that requires no installation. To access CodeX:
 
 1. Open your web browser
-2. Navigate to [https://codex.dulapahv.dev/](https://codex.dulapahv.dev/).
+2. Navigate to [https://codex.bhasidhshaik.dev/](https://codex.bhasidhshaik.dev/).
 3. The platform will load automatically in your browser
 
 ### Creating a Room

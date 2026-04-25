@@ -5,7 +5,7 @@
  * - Result type enumeration
  * - Output metadata
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 
 export interface ExecutionResult {

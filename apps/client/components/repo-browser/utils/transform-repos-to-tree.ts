@@ -1,12 +1,3 @@
-/**
- * Transform GitHub API repository data into tree structure for repository browser.
- * Features:
- * - Repository data transformation
- * - Icon assignment
- * - Type-safe conversion
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { Folder } from "lucide-react";
 

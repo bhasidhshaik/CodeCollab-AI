@@ -3,6 +3,7 @@
 import * as Form from "@radix-ui/react-form";
 import { CirclePlus } from "lucide-react";
 import { Spinner } from "@/components/spinner";
+import { Button } from "@/components/ui/button";
 import { NAME_MAX_LENGTH } from "@/lib/constants";
 import type { CreateRoomForm } from "../types";
 
@@ -55,8 +56,8 @@ export const CreateRoomSection = ({
           {`Name must not exceed ${NAME_MAX_LENGTH} characters`}
         </Form.Message>
       </Form.Field>
-      <Form.Submit asChild>
-        <button
+      {/* <Form.Submit asChild> */}
+        <Button
           aria-busy={isSubmitting}
   disabled={isDisabled}
   className="relative flex w-full items-center justify-center gap-2 rounded-xl py-3 text-sm font-medium text-white 
@@ -72,8 +73,8 @@ export const CreateRoomSection = ({
             <CirclePlus className="size-4" />
           )}
           {isSubmitting ? "Creating..." : "Create Room"}
-        </button>
-      </Form.Submit>
+        </Button>
+      {/* </Form.Submit> */}
     </Form.Root>
   );
 };

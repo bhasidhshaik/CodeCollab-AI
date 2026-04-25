@@ -1,12 +1,3 @@
-/**
- * Code update service functions for the Monaco Editor.
- * Features:
- * - Edit operation handling
- * - Editor state management
- * - Change synchronization
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { EditOp } from "@codex/types/operation";
 

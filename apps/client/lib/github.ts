@@ -1,12 +1,3 @@
-/**
- * GitHub authentication utility functions.
- * Features:
- * - Cookie management
- * - OAuth token handling
- * - User data types
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { RequestCookie } from "next/dist/compiled/@edge-runtime/cookies";
 import { cookies } from "next/headers";

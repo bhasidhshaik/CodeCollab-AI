@@ -1,12 +1,3 @@
-/**
- * Help popover component for live preview functionality.
- * Features:
- * - Usage instructions
- * - Pre-installed libraries list
- * - External links
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { CircleHelp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -74,7 +65,7 @@ const HelpPopover = () => (
                 <li>
                   <a
                     className="!transition-all inline-flex items-center gap-1 text-foreground underline underline-offset-2 hover:text-muted-foreground"
-                    href="https://github.com/dulapahv/CodeX/blob/main/manual.md#live-preview-example"
+                    href="https://github.com/bhasidhshaik/CodeX/blob/main/manual.md#live-preview-example"
                     rel="noopener noreferrer"
                     target="_blank"
                   >

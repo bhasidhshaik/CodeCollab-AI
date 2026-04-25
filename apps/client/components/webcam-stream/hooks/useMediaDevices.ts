@@ -1,9 +1,3 @@
-/**
- * Custom hook for managing media devices (camera, microphone, speaker).
- * Handles device enumeration, selection, and permission management.
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { useCallback, useEffect, useState } from "react";
 

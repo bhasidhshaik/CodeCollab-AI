@@ -1,12 +1,3 @@
-/**
- * GitHub OAuth API route handler.
- * Handles authentication flow with:
- * - OAuth callback processing
- * - Authentication status check
- * - Session cleanup
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { NextRequest } from "next/server";
 

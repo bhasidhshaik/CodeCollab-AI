@@ -1,12 +1,3 @@
-/**
- * Device stream control functions for webcam interface.
- * Features:
- * - Camera toggle with peer track cleanup
- * - Camera rotation (mobile)
- * - Microphone toggle
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { StreamServiceMsg } from "@codex/types/message";
 import type { Dispatch, RefObject, SetStateAction } from "react";

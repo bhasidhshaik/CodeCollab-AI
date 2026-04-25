@@ -1,12 +1,3 @@
-/**
- * Type definitions for animated grid background component.
- * Includes:
- * - Grid configuration
- * - Light animation types
- * - Style definitions
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 export interface GridConfig {
   cellSize: number;

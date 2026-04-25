@@ -1,13 +1,3 @@
-/**
- * GitHub API utility function for fetching repository branches.
- * Features:
- * - Branch data fetching
- * - Loading state management
- * - Error handling
- * - Tree data transformation
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Dispatch, SetStateAction } from "react";
 

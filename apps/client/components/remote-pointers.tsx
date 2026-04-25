@@ -1,13 +1,3 @@
-/**
- * Remote pointer tracking component for visualizing other users' cursors.
- * Features:
- * - Real-time pointer position updates
- * - Throttled movement tracking
- * - Smooth fade animations
- * - Viewport scaling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { PointerServiceMsg } from "@codex/types/message";
 import type { Pointer } from "@codex/types/pointer";

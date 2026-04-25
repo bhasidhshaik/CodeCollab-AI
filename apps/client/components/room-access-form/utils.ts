@@ -1,13 +1,3 @@
-/**
- * Utility functions for room management operations.
- * Features:
- * - Room creation handling
- * - Room joining validation
- * - Room ID formatting
- * - Socket communications
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { RoomServiceMsg } from "@codex/types/message";
 import type { ChangeEvent } from "react";

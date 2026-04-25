@@ -1,9 +1,4 @@
-/**
- * Tailwind CSS Configuration File
- *
- * Modified by Dulapah Vibulsanti (https://dulapahv.dev) from auto-generated
- * code by Tailwind CSS CLI and shadcn/ui CLI.
- */
+
 
 import typography from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
@@ -19,9 +14,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
-      },
+  sans: ["var(--font-sans)"],
+  mono: ["var(--font-mono)"],
+},
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

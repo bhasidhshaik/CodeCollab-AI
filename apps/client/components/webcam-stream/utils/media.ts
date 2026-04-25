@@ -1,12 +1,3 @@
-/**
- * Media stream utilities for webcam interface.
- * Features:
- * - Stream initialization with device selection
- * - Peer connection recreation on stream change
- * - Device switching
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Dispatch, RefObject, SetStateAction } from "react";
 

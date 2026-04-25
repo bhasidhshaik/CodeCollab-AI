@@ -6,7 +6,7 @@
  * - Loading states
  * - Scrollable interface
  *
- * Modified by Dulapah Vibulsanti (https://github.com/dulapahv) from a comment
+ * Modified by Shaik Bhasidh (https://github.com/bhasidhshaik) from a comment
  * on an issue in shadcn-ui/ui by WangLarry (https://github.com/WangLarry).
  * Reference: https://github.com/shadcn-ui/ui/issues/355#issuecomment-1703767574
  */

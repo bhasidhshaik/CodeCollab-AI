@@ -1,13 +1,3 @@
-/**
- * WebRTC peer connection utilities for video/audio streaming.
- * Features:
- * - Peer creation and cleanup
- * - Targeted signal routing
- * - Stream handling
- * - Error handling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { StreamServiceMsg } from "@codex/types/message";
 import type { Dispatch, RefObject, SetStateAction } from "react";

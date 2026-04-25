@@ -4,6 +4,6 @@
  * Index 0: scrollLeft
  * Index 1: scrollTop
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 export type Scroll = [number, number];

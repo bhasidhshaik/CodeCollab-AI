@@ -1,13 +1,3 @@
-/**
- * Media device initialization and enumeration utilities.
- * Features:
- * - Device list management
- * - Device change handling
- * - Permission management
- * - Device selection state
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Dispatch, SetStateAction } from "react";
 

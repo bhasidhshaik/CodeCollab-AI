@@ -1,13 +1,3 @@
-/**
- * Settings dialog component for Monaco editor configuration.
- * Features:
- * - Theme selection
- * - Editor preferences
- * - GitHub connection
- * - Settings import/export
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Monaco } from "@monaco-editor/react";
 import { Unplug } from "lucide-react";

@@ -1,13 +1,3 @@
-/**
- * GitHub API utility function for merging repository folder contents.
- * Features:
- * - Recursive content merging
- * - Path-based matching
- * - Tree data transformation
- * - State updating
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Dispatch, SetStateAction } from "react";
 

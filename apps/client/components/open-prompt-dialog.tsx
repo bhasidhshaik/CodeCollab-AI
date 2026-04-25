@@ -1,12 +1,3 @@
-/**
- * Confirmation dialog component for opening new files.
- * Features:
- * - Responsive dialog/drawer based on screen size
- * - File open confirmation
- * - Unsaved changes warning
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { forwardRef, useCallback, useImperativeHandle, useState } from "react";
 import { Button } from "@/components/ui/button";

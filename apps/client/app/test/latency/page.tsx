@@ -1,12 +1,3 @@
-/**
- * Latency test page component that measures connection speed to server.
- * Features:
- * - Round-trip latency test
- * - Connection status display
- * - Results visualization
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Metadata } from "next";
 import { LatencyTest } from "@/components/latency-test";

@@ -1,8 +1,3 @@
-/**
- * Create a style for a cursor.
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 /**
  * Create a style for a cursor.

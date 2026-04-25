@@ -1,12 +1,3 @@
-/**
- * Video control overlay component for video chat interface.
- * Features:
- * - Microphone status indicator
- * - Speaker status indicator
- * - Local/remote state handling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { Mic, MicOff, Volume2, VolumeOff } from "lucide-react";
 

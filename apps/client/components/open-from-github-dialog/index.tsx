@@ -1,8 +1,3 @@
-/**
- * Open from GitHub dialog component that handles file browsing and loading.
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { Monaco } from "@monaco-editor/react";
 import type * as monaco from "monaco-editor";

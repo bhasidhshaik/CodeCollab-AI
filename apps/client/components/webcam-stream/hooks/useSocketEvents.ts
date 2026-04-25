@@ -1,9 +1,3 @@
-/**
- * Custom hook for managing Socket.IO events related to webcam streaming.
- * Handles signaling, state synchronization, and user connection events.
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { RoomServiceMsg, StreamServiceMsg } from "@codex/types/message";
 import { useEffect, useRef } from "react";

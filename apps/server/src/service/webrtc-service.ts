@@ -5,7 +5,7 @@
  * - Camera state sync
  * - User notification
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 
 import { StreamServiceMsg } from "@codex/types/message";

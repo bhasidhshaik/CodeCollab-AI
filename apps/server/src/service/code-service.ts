@@ -6,7 +6,7 @@
  * - Language state sync
  * - Real-time broadcast
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 
 import { CodeServiceMsg } from "@codex/types/message";

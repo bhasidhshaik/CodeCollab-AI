@@ -1,11 +1,3 @@
-/**
- * AI Chat sidebar component for CodeX.
- * Features:
- * - Gemini AI powered chat
- * - Code-aware context
- * - Chat history
- * - Clear chat
- */
 
 "use client";
 

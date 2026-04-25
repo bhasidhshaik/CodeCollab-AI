@@ -1,11 +1,3 @@
-/**
- * Global window interface extensions.
- * Features:
- * - Auth window reference
- * - Type definitions
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 declare global {
   interface Window {

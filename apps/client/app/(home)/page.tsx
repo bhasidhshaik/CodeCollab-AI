@@ -95,7 +95,7 @@ export default async function Page({ searchParams }: PageProps<"/">) {
         </div>
 
         {/* Headline */}
-        <h1 className="mb-5 max-w-2xl text-5xl font-medium leading-[1.08] tracking-[-2px] sm:text-6xl">
+        <h1 className="mb-5 max-w-2xl text-5xl font-bold leading-[1.08] tracking-[-2px] sm:text-6xl">
           The{" "}
           <span
             style={{

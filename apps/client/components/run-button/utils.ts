@@ -1,12 +1,3 @@
-/**
- * Utility functions for code execution control.
- * Features:
- * - Execution cancellation
- * - Output formatting
- * - Socket messaging
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { CodeServiceMsg } from "@codex/types/message";
 import {

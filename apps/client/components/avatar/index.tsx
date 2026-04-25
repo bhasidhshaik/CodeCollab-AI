@@ -1,13 +1,3 @@
-/**
- * Avatar component that displays user initials with custom styling.
- * Features:
- * - Responsive sizing options
- * - Tooltip/Popover for user names
- * - Animated scaling
- * - Device-specific interaction
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import type { User } from "@codex/types/user";
 import { isMobile } from "react-device-detect";

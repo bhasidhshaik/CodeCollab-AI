@@ -6,6 +6,9 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 export async function POST(req: NextRequest) {
   try {
     const { messages, code, language } = await req.json();
+    console.log("Received messages:", messages);
+    console.log("Received code:", code);
+    console.log("Received language:", language);
 
     if (!process.env.GEMINI_API_KEY) {
       return NextResponse.json(
@@ -16,7 +19,7 @@ export async function POST(req: NextRequest) {
 
     const model = genAI.getGenerativeModel({ 
       model: "gemini-2.5-flash",
-      systemInstruction: `You are an expert coding assistant integrated into CodeX, 
+      systemInstruction: `You are an expert coding assistant integrated into CodeCollab AI, 
       a real-time collaborative coding platform. You help users with their code by 
       answering questions, explaining concepts, finding bugs, and suggesting improvements.
       Be concise, helpful, and format code snippets with proper markdown.
@@ -45,8 +48,8 @@ export async function POST(req: NextRequest) {
     const lastMessage = messages[messages.length - 1];
     const result = await chat.sendMessage(lastMessage.content);
     const text = result.response.text();
-
-    return NextResponse.json({ message: text });
+    console.log(model.systemInstruction)
+    return NextResponse.json({ message: text, q:model.systemInstruction });
   } catch (error) {
     console.error("Gemini API error:", error);
     return NextResponse.json(

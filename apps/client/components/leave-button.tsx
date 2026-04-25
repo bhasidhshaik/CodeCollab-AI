@@ -1,12 +1,3 @@
-/**
- * Navigation button component that handles room leaving confirmation.
- * Features:
- * - Dialog trigger
- * - Accessible controls
- * - Styling customization
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { LogOut } from "lucide-react";
 import { type FocusEvent, useRef } from "react";

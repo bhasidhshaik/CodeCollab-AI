@@ -1,9 +1,3 @@
-/**
- * Custom hook for managing dialog open/close state with imperative handle.
- * Provides standardized dialog control interface.
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import {
   type ForwardedRef,

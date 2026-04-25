@@ -1,13 +1,3 @@
-/**
- * OAuth callback page component that handles GitHub authentication response.
- * Displays loading state and communicates authentication result to parent window.
- * Features:
- * - Status message display
- * - Parent window messaging
- * - Automatic window handling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 "use client";
 

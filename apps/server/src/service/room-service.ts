@@ -6,7 +6,7 @@
  * - Room state management
  * - User data sync
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 
 import { CodeServiceMsg, RoomServiceMsg } from "@codex/types/message";

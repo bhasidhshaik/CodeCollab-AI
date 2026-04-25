@@ -1,13 +1,3 @@
-/**
- * Next.js configuration for the client application.
- * Features:
- * - Sentry error tracking
- * - Package optimization
- * - Image domains
- * - Turbo config
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import path from "node:path";
 import { withSentryConfig } from "@sentry/nextjs";
@@ -55,7 +45,7 @@ const nextConfig: NextConfig = {
 const isCi = process.env.CI === "true";
 
 export default withSentryConfig(nextConfig, {
-  org: "dulapahv",
+  org: "bhasidhshaik",
   project: "codex",
   silent: !process.env.CI, // Only print logs for uploading source maps in CI
   widenClientFileUpload: true, // Upload a larger set of source maps for prettier stack traces (increases build time)

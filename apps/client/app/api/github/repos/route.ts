@@ -1,13 +1,3 @@
-/**
- * GitHub API route handler for searching user repositories.
- * Features:
- * - Search query handling
- * - Authentication validation
- * - Repository filtering
- * - Sorting and ordering
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";

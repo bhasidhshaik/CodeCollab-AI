@@ -1,13 +1,3 @@
-/**
- * GitHub API route handler for fetching file content.
- * Features:
- * - Authentication verification
- * - Parameter validation
- * - Repository content retrieval
- * - Error handling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";

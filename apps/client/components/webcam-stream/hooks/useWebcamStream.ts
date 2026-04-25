@@ -1,9 +1,3 @@
-/**
- * Custom hook for managing local webcam stream state and controls.
- * Handles camera/mic toggling and facial mode switching.
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { StreamServiceMsg } from "@codex/types/message";
 import type { Dispatch, SetStateAction } from "react";

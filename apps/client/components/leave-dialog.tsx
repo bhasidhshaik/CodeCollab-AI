@@ -1,12 +1,3 @@
-/**
- * Confirmation dialog component for leaving room.
- * Features:
- * - Responsive dialog/drawer based on screen size
- * - Room leaving confirmation
- * - Leave action handling
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { forwardRef, useCallback, useImperativeHandle, useState } from "react";
 import { Button } from "@/components/ui/button";

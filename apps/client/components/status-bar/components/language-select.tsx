@@ -1,13 +1,3 @@
-/**
- * Language selector component for Monaco editor.
- * Features:
- * - Language switching
- * - Search and filtering
- * - Synchronized language state
- * - Mobile support
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 import { CodeServiceMsg } from "@codex/types/message";
 

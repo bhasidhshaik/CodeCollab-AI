@@ -6,7 +6,7 @@
  * - Reporter configuration
  * - Mock handling
  *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
+ * By Shaik Bhasidh (https://bhasidhshaik.dev)
  */
 
 import type { Config } from "jest";

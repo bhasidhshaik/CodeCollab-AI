@@ -1,12 +1,3 @@
-/**
- * Storage service class for managing room and user state.
- * Features:
- * - Room ID persistence
- * - User ID management
- * - Follow mode state
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 interface StorageData {
   followUserId: string | null;

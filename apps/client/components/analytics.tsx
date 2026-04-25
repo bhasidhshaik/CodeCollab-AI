@@ -1,12 +1,3 @@
-/**
- * Analytics component that integrates Vercel Analytics with room URL filtering.
- * Features:
- * - Custom URL filtering
- * - Room ID removal
- * - Homepage tracking
- *
- * By Dulapah Vibulsanti (https://dulapahv.dev)
- */
 
 "use client";
 
