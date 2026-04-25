@@ -17,6 +17,7 @@ fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
 
 echo "=== npm install ==="
 npm install --legacy-peer-deps --include=dev
+npm install @types/simple-peer --save-dev --legacy-peer-deps
 
 echo "=== Copy types ==="
 mkdir -p node_modules/@codex/types
