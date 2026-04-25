@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon -r tsconfig-paths/register src/index.ts",
     "start": "node dist/index.js",
-    "build": "rimraf dist && tsc -p tsconfig.prod.json && tsc-alias -p tsconfig.prod.json && echo Server built successfully!",
+    "build": "node -e \"require('fs').rmSync('dist', {recursive:true, force:true})\" && tsc -p tsconfig.prod.json && tsc-alias -p tsconfig.prod.json && echo Server built successfully!",
     "test:socket": "start-server-and-test 'pnpm start' tcp:3001 'jest --server=local'",
     "test:socket:remote": "jest --server=remote",
     "test:watch": "start-server-and-test 'pnpm start' tcp:3001 'jest --server=local --watch'"
