@@ -2,23 +2,18 @@ const ALLOWED_ORIGINS = [
   "https://collab-code-ai.vercel.app",
   "https://codecollab-ai-server.onrender.com",
   "http://localhost:3000",
+  "http://localhost:3001",
 ] as const;
 
 const VERCEL_DEPLOYMENT_PATTERN =
-  /^https:\/\/collab-code-ai-[a-zA-Z0-9]+-[a-zA-Z0-9-]+\.vercel\.app$/;
+  /^https:\/\/collab-code-ai.*\.vercel\.app$/;
 
 const isVercelDeployment = (origin: string): boolean => {
   return VERCEL_DEPLOYMENT_PATTERN.test(origin);
 };
 
 const getAllowedOrigin = (origin: string | undefined): string => {
-  if (process.env.NODE_ENV === "production" && !origin) {
-    return ALLOWED_ORIGINS[0];
-  }
-
-  if (!origin) {
-    return "*";
-  }
+  if (!origin) return "*";
 
   if (
     ALLOWED_ORIGINS.includes(origin as (typeof ALLOWED_ORIGINS)[number]) ||
