@@ -1,4 +1,3 @@
-
 import type { User } from "@codex/types/user";
 
 import { Check, Navigation, NavigationOff } from "lucide-react";

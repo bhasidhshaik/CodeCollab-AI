@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 
 import { SITE_NAME } from "@/lib/constants";

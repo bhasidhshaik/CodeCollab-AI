@@ -1,4 +1,3 @@
-
 import type { ExecutionResult } from "@codex/types/terminal";
 
 import { Download, Trash2 } from "lucide-react";

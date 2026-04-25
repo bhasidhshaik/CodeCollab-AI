@@ -1,4 +1,3 @@
-
 import type { Scroll } from "@codex/types/scroll";
 
 import type * as monaco from "monaco-editor";

@@ -1,4 +1,3 @@
-
 import { expect, type Page } from "@playwright/test";
 
 const ROOM_URL_PATTERN = /\/room\/.*/;

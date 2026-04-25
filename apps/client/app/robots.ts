@@ -1,4 +1,3 @@
-
 import type { MetadataRoute } from "next";
 
 import { BASE_CLIENT_URL } from "@/lib/constants";

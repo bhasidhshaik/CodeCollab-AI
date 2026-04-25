@@ -1,4 +1,3 @@
-
 import type { User } from "@codex/types/user";
 import { useTheme } from "next-themes";
 import { Avatar } from "@/components/avatar";

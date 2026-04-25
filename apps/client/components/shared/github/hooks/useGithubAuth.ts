@@ -1,4 +1,3 @@
-
 import { useEffect, useLayoutEffect, useState } from "react";
 
 export const useGithubAuth = (isOpen: boolean) => {

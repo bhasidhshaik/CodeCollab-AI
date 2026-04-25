@@ -1,4 +1,3 @@
-
 import { FileCode, Folder } from "lucide-react";
 
 import type { GithubContent } from "../types/github";

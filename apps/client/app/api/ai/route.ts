@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const model = genAI.getGenerativeModel({ 
+    const model = genAI.getGenerativeModel({
       model: "gemini-2.5-flash",
       systemInstruction: `You are an expert coding assistant integrated into CodeCollab AI, 
       a real-time collaborative coding platform. You help users with their code by 
@@ -30,8 +30,9 @@ export async function POST(req: NextRequest) {
     // and ensure history starts with a user message
     const history = messages
       .slice(0, -1)
-      .filter((msg: { role: string; content: string }) => 
-        msg.role === "user" || msg.role === "assistant"
+      .filter(
+        (msg: { role: string; content: string }) =>
+          msg.role === "user" || msg.role === "assistant"
       )
       .map((msg: { role: string; content: string }) => ({
         role: msg.role === "user" ? "user" : "model",
@@ -48,8 +49,8 @@ export async function POST(req: NextRequest) {
     const lastMessage = messages[messages.length - 1];
     const result = await chat.sendMessage(lastMessage.content);
     const text = result.response.text();
-    console.log(model.systemInstruction)
-    return NextResponse.json({ message: text, q:model.systemInstruction });
+    console.log(model.systemInstruction);
+    return NextResponse.json({ message: text, q: model.systemInstruction });
   } catch (error) {
     console.error("Gemini API error:", error);
     return NextResponse.json(

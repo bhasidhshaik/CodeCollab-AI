@@ -1,7 +1,6 @@
-
 "use client";
 
-import { Bot, Trash2, Sparkles } from "lucide-react";
+import { Bot, Sparkles, Trash2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { ChatInput } from "./components/chat-input";
 import { ChatMessage, type Message } from "./components/chat-message";
@@ -74,21 +73,21 @@ export function AiChat({ code, language }: AiChatProps) {
   return (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <div className="flex items-center justify-between border-b border-white/10 px-3 py-2">
+      <div className="flex items-center justify-between border-white/10 border-b px-3 py-2">
         <div className="flex items-center gap-2">
           <div className="flex size-6 items-center justify-center rounded-md bg-purple-500/20">
             <Sparkles className="size-3 text-purple-400" />
           </div>
-          <span className="text-xs font-semibold">AI Assistant</span>
+          <span className="font-semibold text-xs">AI Assistant</span>
         </div>
         <div className="flex items-center gap-1">
           <span className="text-[10px] text-muted-foreground">
             {language || "No language"}
           </span>
           <button
+            className="rounded p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             onClick={clearChat}
             title="Clear chat"
-            className="rounded p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
           >
             <Trash2 className="size-3" />
           </button>
@@ -101,7 +100,7 @@ export function AiChat({ code, language }: AiChatProps) {
           <ChatMessage key={i} message={message} />
         ))}
         {isLoading && (
-          <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-muted/30 border border-white/5">
+          <div className="flex items-center gap-2 rounded-lg border border-white/5 bg-muted/30 px-3 py-2">
             <div className="flex size-5 shrink-0 items-center justify-center rounded-full bg-purple-500">
               <Bot className="size-3 text-white" />
             </div>

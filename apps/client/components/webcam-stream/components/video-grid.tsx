@@ -1,4 +1,3 @@
-
 import type { User } from "@codex/types/user";
 import type { RefObject } from "react";
 import { Avatar } from "@/components/avatar";

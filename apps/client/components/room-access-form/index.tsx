@@ -3,7 +3,6 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
-import { Separator } from "@/components/ui/separator";
 import { parseError } from "@/lib/utils";
 import { BackButton } from "./components/back-button";
 import { CreateRoomSection } from "./components/create-room-section";
@@ -78,9 +77,7 @@ const RoomAccessForm = ({ roomId }: RoomAccessFormProps) => {
       <div className="flex flex-col gap-4">
         <div className="space-y-1 text-center">
           <p className="text-sm text-white/60">Enter your name to join</p>
-          <p className="font-mono text-base font-medium text-white">
-            {roomId}
-          </p>
+          <p className="font-medium font-mono text-base text-white">{roomId}</p>
         </div>
         <InvitedSection
           isCreating={isCreating}
@@ -99,7 +96,7 @@ const RoomAccessForm = ({ roomId }: RoomAccessFormProps) => {
         <p className="font-medium text-white">Invalid room ID</p>
         <p className="text-sm text-white/50">
           Room ID should look like:{" "}
-          <span className="font-mono font-bold text-white">XXXX-XXXX</span>
+          <span className="font-bold font-mono text-white">XXXX-XXXX</span>
         </p>
         <BackButton disabled={isJoining} onClick={() => router.push("/")} />
       </div>
@@ -111,7 +108,7 @@ const RoomAccessForm = ({ roomId }: RoomAccessFormProps) => {
       {/* Tabs */}
       <div className="flex rounded-xl bg-white/4 p-1">
         <button
-          className={`flex-1 rounded-lg py-2 text-xs font-medium transition-all ${
+          className={`flex-1 rounded-lg py-2 font-medium text-xs transition-all ${
             activeTab === "create"
               ? "bg-white/10 text-white"
               : "text-white/35 hover:text-white/60"
@@ -122,7 +119,7 @@ const RoomAccessForm = ({ roomId }: RoomAccessFormProps) => {
           Create Room
         </button>
         <button
-          className={`flex-1 rounded-lg py-2 text-xs font-medium transition-all ${
+          className={`flex-1 rounded-lg py-2 font-medium text-xs transition-all ${
             activeTab === "join"
               ? "bg-white/10 text-white"
               : "text-white/35 hover:text-white/60"

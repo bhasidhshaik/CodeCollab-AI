@@ -1,4 +1,3 @@
-
 import { ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 import type { ExtendedTreeDataItem } from "@/components/repo-browser/types/tree";

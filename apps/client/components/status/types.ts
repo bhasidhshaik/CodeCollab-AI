@@ -1,4 +1,3 @@
-
 export interface ServiceStatus {
   color: string;
   description: string;

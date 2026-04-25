@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Bug, Home, RefreshCcw } from "lucide-react";

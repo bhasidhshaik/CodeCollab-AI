@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import {
   forwardRef,
@@ -109,7 +108,8 @@ const AboutDialog = forwardRef<AboutDialogRef, AboutDialogProps>(
 
             <div className="space-y-2 text-foreground">
               <p className="text-center">
-                Made with 💕 by <span className="font-medium">bhasidhshaik</span>
+                Made with 💕 by{" "}
+                <span className="font-medium">bhasidhshaik</span>
               </p>
               <nav
                 aria-label="External links"

@@ -1,4 +1,3 @@
-
 import { Settings } from "lucide-react";
 
 interface GithubFooterInfoProps {

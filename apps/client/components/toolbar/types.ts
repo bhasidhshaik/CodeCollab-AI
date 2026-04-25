@@ -1,5 +1,3 @@
-
-
 export interface MenuProps {
   actions: ToolbarActions;
   aiChat?: boolean;
@@ -76,8 +74,11 @@ export interface ToolbarActions {
   sortLinesDescending: () => void;
   /** Transform to title case */
   titleCase: () => void;
+  /** Toggle AI chat panel */
+  toggleAiPanel: () => void;
   /** Toggle block comment */
   toggleBlockComment: () => void;
+  toggleCodeReviewPanel: () => void;
   /** Toggle fold */
   toggleFold: () => void;
   /** Toggle line comment */
@@ -90,9 +91,6 @@ export interface ToolbarActions {
   toggleTerminalPanel: () => void;
   /** Toggle webcam stream panel */
   toggleWebcamPanel: () => void;
-  /** Toggle AI chat panel */
-  toggleAiPanel: () => void;
-  toggleCodeReviewPanel: () => void;
   /** Undo last action */
   undo: () => void;
   /** Unfold all */

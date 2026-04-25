@@ -1,4 +1,3 @@
-
 export const SELECT_OPTIONS: Record<string, string[]> = {
   acceptSuggestionOnEnter: ["on", "off", "smart"],
   autoClosingBrackets: [

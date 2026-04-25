@@ -34,7 +34,7 @@ export const JoinRoomSection = ({
       }}
     >
       <Form.Field className="flex flex-col gap-1.5" name="roomId">
-        <Form.Label className="text-[11px] uppercase tracking-wider text-white/35">
+        <Form.Label className="text-[11px] text-white/35 uppercase tracking-wider">
           Room ID
         </Form.Label>
         <Form.Control asChild>
@@ -49,15 +49,15 @@ export const JoinRoomSection = ({
             required
           />
         </Form.Control>
-        <Form.Message className="text-xs text-red-400" match="valueMissing">
+        <Form.Message className="text-red-400 text-xs" match="valueMissing">
           Room ID is required
         </Form.Message>
-        <Form.Message className="text-xs text-red-400" match="patternMismatch">
+        <Form.Message className="text-red-400 text-xs" match="patternMismatch">
           Invalid room ID format
         </Form.Message>
       </Form.Field>
       <Form.Field className="flex flex-col gap-1.5" name="name">
-        <Form.Label className="text-[11px] uppercase tracking-wider text-white/35">
+        <Form.Label className="text-[11px] text-white/35 uppercase tracking-wider">
           Your Name
         </Form.Label>
         <Form.Control asChild>
@@ -71,11 +71,11 @@ export const JoinRoomSection = ({
             required
           />
         </Form.Control>
-        <Form.Message className="text-xs text-red-400" match="valueMissing">
+        <Form.Message className="text-red-400 text-xs" match="valueMissing">
           Name is required
         </Form.Message>
         <Form.Message
-          className="text-xs text-red-400"
+          className="text-red-400 text-xs"
           match={(value) => value.trim().length > NAME_MAX_LENGTH}
         >
           {`Name must not exceed ${NAME_MAX_LENGTH} characters`}
@@ -84,8 +84,8 @@ export const JoinRoomSection = ({
       <Form.Submit asChild>
         <button
           aria-busy={isSubmitting}
-          disabled={isDisabled}
           className="flex w-full items-center justify-center gap-2 rounded-xl border border-white/8 bg-white/5 py-3 text-sm text-white/60 transition-colors hover:bg-white/8 disabled:opacity-50"
+          disabled={isDisabled}
         >
           {isSubmitting && <Spinner className="size-4" />}
           {isSubmitting ? "Joining..." : "Join Room"}

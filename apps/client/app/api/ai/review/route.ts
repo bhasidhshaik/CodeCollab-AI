@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
@@ -15,10 +15,7 @@ export async function POST(req: NextRequest) {
     }
 
     if (!code?.trim()) {
-      return NextResponse.json(
-        { error: "No code provided" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "No code provided" }, { status: 400 });
     }
 
     const model = genAI.getGenerativeModel({

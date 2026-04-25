@@ -1,19 +1,26 @@
 import { ArrowUp, Loader2 } from "lucide-react";
-import { useRef, type KeyboardEvent } from "react";
+import { type KeyboardEvent, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 interface ChatInputProps {
-  onSend: (message: string) => void;
-  isLoading: boolean;
   input: string;
+  isLoading: boolean;
+  onSend: (message: string) => void;
   setInput: (value: string) => void;
 }
 
-export function ChatInput({ onSend, isLoading, input, setInput }: ChatInputProps) {
+export function ChatInput({
+  onSend,
+  isLoading,
+  input,
+  setInput,
+}: ChatInputProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSend = () => {
-    if (!input.trim() || isLoading) return;
+    if (!input.trim() || isLoading) {
+      return;
+    }
     onSend(input.trim());
     setInput("");
     if (textareaRef.current) {
@@ -37,31 +44,31 @@ export function ChatInput({ onSend, isLoading, input, setInput }: ChatInputProps
   };
 
   return (
-    <div className="p-2 border-t border-white/10">
+    <div className="border-white/10 border-t p-2">
       <div className="flex items-end gap-2 rounded-lg border border-white/10 bg-muted/30 px-3 py-2">
         <textarea
-          ref={textareaRef}
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleKeyDown}
-          onInput={handleInput}
-          placeholder="Ask about your code... (Enter to send)"
-          rows={1}
           className={cn(
             "flex-1 resize-none bg-transparent text-xs outline-none",
-            "placeholder:text-muted-foreground leading-relaxed",
+            "leading-relaxed placeholder:text-muted-foreground",
             "max-h-[120px] min-h-[20px]"
           )}
+          onChange={(e) => setInput(e.target.value)}
+          onInput={handleInput}
+          onKeyDown={handleKeyDown}
+          placeholder="Ask about your code... (Enter to send)"
+          ref={textareaRef}
+          rows={1}
+          value={input}
         />
         <button
-          onClick={handleSend}
-          disabled={!input.trim() || isLoading}
           className={cn(
             "mb-0.5 shrink-0 rounded-md p-1 transition-colors",
             input.trim() && !isLoading
               ? "bg-blue-500 text-white hover:bg-blue-600"
-              : "bg-muted text-muted-foreground cursor-not-allowed"
+              : "cursor-not-allowed bg-muted text-muted-foreground"
           )}
+          disabled={!input.trim() || isLoading}
+          onClick={handleSend}
         >
           {isLoading ? (
             <Loader2 className="size-3 animate-spin" />

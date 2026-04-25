@@ -1,4 +1,3 @@
-
 import { Menu } from "lucide-react";
 import { useEffect, useRef } from "react";
 

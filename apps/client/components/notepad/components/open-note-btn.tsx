@@ -1,4 +1,3 @@
-
 import { RoomServiceMsg } from "@codex/types/message";
 
 import { ButtonWithTooltip, type MDXEditorMethods } from "@mdxeditor/editor";

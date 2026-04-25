@@ -1,8 +1,3 @@
-
-
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
-
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@/components/analytics";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -19,7 +14,7 @@ import {
 import "./globals.css";
 
 // export const runtime = 'edge';
-import { DM_Sans, DM_Mono } from "next/font/google";
+import { DM_Mono, DM_Sans } from "next/font/google";
 
 const dmSans = DM_Sans({
   variable: "--font-sans",

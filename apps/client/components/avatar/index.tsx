@@ -1,4 +1,3 @@
-
 import type { User } from "@codex/types/user";
 import { isMobile } from "react-device-detect";
 import {

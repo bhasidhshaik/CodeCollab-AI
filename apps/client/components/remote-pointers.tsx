@@ -1,4 +1,3 @@
-
 import { PointerServiceMsg } from "@codex/types/message";
 import type { Pointer } from "@codex/types/pointer";
 import { MousePointer2 } from "lucide-react";

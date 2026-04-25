@@ -1,4 +1,3 @@
-
 export interface TestResult {
   http: number;
   id: number;

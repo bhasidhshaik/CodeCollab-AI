@@ -1,4 +1,3 @@
-
 import { useRouter } from "next/navigation";
 
 import { leaveRoom, terminateRoom } from "@/lib/utils";

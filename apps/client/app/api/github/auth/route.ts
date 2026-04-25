@@ -1,4 +1,3 @@
-
 import type { NextRequest } from "next/server";
 
 import { githubAuthHandlers } from "@/lib/github";

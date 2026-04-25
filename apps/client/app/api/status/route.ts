@@ -1,4 +1,4 @@
-// 
+//
 // import { NextResponse } from "next/server";
 // import type { BetterStackResponse } from "@/components/status/types";
 // import { KASCA_SERVER_MONITOR_ID } from "@/lib/constants";
@@ -30,9 +30,6 @@
 //     );
 //   }
 // }
-
-
-
 
 export async function GET() {
   return Response.json({ status: "ok" });

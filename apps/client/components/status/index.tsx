@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
@@ -97,26 +95,28 @@ const Status = () => {
     }
   }, []);
 
-useEffect(() => {
-  let isMounted = true;
+  useEffect(() => {
+    let isMounted = true;
 
-  const run = async () => {
-    if (!isMounted) return;
-    await fetchStatus();
-  };
+    const run = async () => {
+      if (!isMounted) {
+        return;
+      }
+      await fetchStatus();
+    };
 
-  run();
-
-  const intervalId = setInterval(() => {
-    setIsRefreshing(true);
     run();
-  }, REFRESH_INTERVAL);
 
-  return () => {
-    isMounted = false;
-    clearInterval(intervalId);
-  };
-}, []);
+    const intervalId = setInterval(() => {
+      setIsRefreshing(true);
+      run();
+    }, REFRESH_INTERVAL);
+
+    return () => {
+      isMounted = false;
+      clearInterval(intervalId);
+    };
+  }, []);
 
   return (
     <a

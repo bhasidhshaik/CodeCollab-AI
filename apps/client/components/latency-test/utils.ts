@@ -1,4 +1,3 @@
-
 import type { Stats } from "./types";
 
 export const calculateStats = (values: number[]): Stats => {

@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 
 import { INVITED_DESCRIPTION } from "@/lib/constants";

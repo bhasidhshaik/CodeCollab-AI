@@ -1,4 +1,3 @@
-
 export interface EditorOption {
   currentValue: unknown;
   options?: string[];

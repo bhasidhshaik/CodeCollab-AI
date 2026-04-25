@@ -1,4 +1,3 @@
-
 import type { Monaco } from "@monaco-editor/react";
 import { Download, Folder, Search } from "lucide-react";
 import type * as monaco from "monaco-editor";

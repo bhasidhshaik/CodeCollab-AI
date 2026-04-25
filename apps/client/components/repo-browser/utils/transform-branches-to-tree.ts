@@ -1,4 +1,3 @@
-
 import { GitBranch } from "lucide-react";
 
 import type { GithubBranch } from "../types/github";

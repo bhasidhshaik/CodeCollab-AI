@@ -1,4 +1,3 @@
-
 import type { User } from "@codex/types/user";
 
 const WHITESPACE_PATTERN = /\s+/;

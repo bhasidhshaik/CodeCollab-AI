@@ -1,5 +1,3 @@
-
-
 import type { Monaco } from "@monaco-editor/react";
 import type * as monaco from "monaco-editor";
 import { type Dispatch, type SetStateAction, useEffect, useRef } from "react";
@@ -32,13 +30,13 @@ import { getOS, openLocal, saveLocal } from "./utils";
 interface ToolbarProps {
   editor: monaco.editor.IStandaloneCodeEditor | null;
   monaco: Monaco | null;
+  setShowAiChat: Dispatch<SetStateAction<boolean>>;
+  setShowCodeReview: Dispatch<SetStateAction<boolean>>;
   setShowLivePreview: Dispatch<SetStateAction<boolean>>;
   setShowNotepad: Dispatch<SetStateAction<boolean>>;
   setShowTerminal: Dispatch<SetStateAction<boolean>>;
   setShowWebcam: Dispatch<SetStateAction<boolean>>;
-  setShowAiChat: Dispatch<SetStateAction<boolean>>;
   showAiChat: boolean;
-  setShowCodeReview: Dispatch<SetStateAction<boolean>>;
   showCodeReview: boolean;
   showLivePreview: boolean;
   showNotepad: boolean;
@@ -57,7 +55,7 @@ const Toolbar = ({
   showTerminal,
   showWebcam,
   showLivePreview,
- setShowAiChat,
+  setShowAiChat,
   showAiChat,
   setShowCodeReview,
   showCodeReview,
@@ -288,15 +286,15 @@ const Toolbar = ({
     <>
       {isDesktop ? (
         <DesktopMenu
-        actions={toolbarActions}
-        aiChat={showAiChat}
-        codeReview={showCodeReview}
-        livePreview={showLivePreview}
-        modKey={modKey}
-        notepad={showNotepad}
-        terminal={showTerminal}
-        webcam={showWebcam}
-      />
+          actions={toolbarActions}
+          aiChat={showAiChat}
+          codeReview={showCodeReview}
+          livePreview={showLivePreview}
+          modKey={modKey}
+          notepad={showNotepad}
+          terminal={showTerminal}
+          webcam={showWebcam}
+        />
       ) : (
         <MobileMenu
           actions={toolbarActions}

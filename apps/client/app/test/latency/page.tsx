@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { LatencyTest } from "@/components/latency-test";
 import { LATENCY_TEST_DESCRIPTION, LATENCY_TEST_TITLE } from "@/lib/constants";

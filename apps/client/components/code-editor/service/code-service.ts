@@ -1,4 +1,3 @@
-
 import type { EditOp } from "@codex/types/operation";
 
 import type * as monaco from "monaco-editor";

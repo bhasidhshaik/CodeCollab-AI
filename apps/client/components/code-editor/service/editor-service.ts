@@ -1,4 +1,3 @@
-
 import { CodeServiceMsg, ScrollServiceMsg } from "@codex/types/message";
 import type { Cursor, EditOp } from "@codex/types/operation";
 import type { Monaco } from "@monaco-editor/react";

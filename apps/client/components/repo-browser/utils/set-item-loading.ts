@@ -1,4 +1,3 @@
-
 import type { Dispatch, SetStateAction } from "react";
 
 import type { ExtendedTreeDataItem } from "../types/tree";

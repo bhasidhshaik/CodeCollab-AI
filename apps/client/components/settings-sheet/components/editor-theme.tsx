@@ -1,4 +1,3 @@
-
 import type { Monaco } from "@monaco-editor/react";
 import { Check, ChevronsUpDown } from "lucide-react";
 import themeList from "monaco-themes/themes/themelist.json";

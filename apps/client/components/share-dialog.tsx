@@ -1,4 +1,3 @@
-
 import { Check, Copy } from "lucide-react";
 import { QRCodeCanvas } from "qrcode.react";
 import {

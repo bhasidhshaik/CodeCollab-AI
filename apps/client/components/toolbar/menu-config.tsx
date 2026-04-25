@@ -1,7 +1,5 @@
-
 import {
   ArrowBigDownDash,
-  Sparkles,
   ArrowBigUpDash,
   ArrowDownToLine,
   ArrowDownWideNarrow,
@@ -37,6 +35,7 @@ import {
   Scissors,
   Search,
   Settings,
+  Sparkles,
   SquareDashedMousePointer,
   Terminal,
   TextSelect,

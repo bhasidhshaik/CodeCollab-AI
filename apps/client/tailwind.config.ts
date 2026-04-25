@@ -1,5 +1,3 @@
-
-
 import typography from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
@@ -14,9 +12,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-  sans: ["var(--font-sans)"],
-  mono: ["var(--font-mono)"],
-},
+        sans: ["var(--font-sans)"],
+        mono: ["var(--font-mono)"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

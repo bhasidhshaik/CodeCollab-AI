@@ -1,4 +1,3 @@
-
 import type { Monaco } from "@monaco-editor/react";
 import type * as monaco from "monaco-editor";
 import { forwardRef, useEffect, useState } from "react";

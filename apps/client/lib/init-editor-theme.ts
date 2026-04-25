@@ -1,4 +1,3 @@
-
 import type { Monaco } from "@monaco-editor/react";
 import themeList from "monaco-themes/themes/themelist.json";
 

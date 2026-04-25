@@ -24,21 +24,21 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface ReviewItem {
-  line?: number | null;
-  severity?: "high" | "medium" | "low";
   description: string;
-  fix?: string;
   example?: string | null;
+  fix?: string;
+  line?: number | null;
   passed?: boolean;
+  severity?: "high" | "medium" | "low";
 }
 
 interface ReviewResult {
-  summary: string;
-  score: number;
+  bestPractices: ReviewItem[];
   bugs: ReviewItem[];
   improvements: ReviewItem[];
-  bestPractices: ReviewItem[];
+  score: number;
   security: ReviewItem[];
+  summary: string;
 }
 
 interface CodeReviewProps {
@@ -48,16 +48,24 @@ interface CodeReviewProps {
 
 const severityColor = (severity?: string) => {
   switch (severity) {
-    case "high": return "text-red-400";
-    case "medium": return "text-yellow-400";
-    case "low": return "text-blue-400";
-    default: return "text-muted-foreground";
+    case "high":
+      return "text-red-400";
+    case "medium":
+      return "text-yellow-400";
+    case "low":
+      return "text-blue-400";
+    default:
+      return "text-muted-foreground";
   }
 };
 
 const scoreColor = (score: number) => {
-  if (score >= 80) return "text-green-400";
-  if (score >= 60) return "text-yellow-400";
+  if (score >= 80) {
+    return "text-green-400";
+  }
+  if (score >= 60) {
+    return "text-yellow-400";
+  }
   return "text-red-400";
 };
 
@@ -75,17 +83,19 @@ function Section({
   defaultOpen?: boolean;
 }) {
   const [open, setOpen] = useState(defaultOpen);
-  if (!items?.length) return null;
+  if (!items?.length) {
+    return null;
+  }
   return (
-    <div className="border border-white/10 rounded-lg overflow-hidden">
+    <div className="overflow-hidden rounded-lg border border-white/10">
       <button
+        className="flex w-full items-center justify-between bg-muted/30 px-3 py-2 transition-colors hover:bg-muted/50"
         onClick={() => setOpen((o) => !o)}
-        className="flex w-full items-center justify-between px-3 py-2 bg-muted/30 hover:bg-muted/50 transition-colors"
       >
-        <div className="flex items-center gap-2 text-xs font-semibold">
+        <div className="flex items-center gap-2 font-semibold text-xs">
           {icon}
           {title}
-          <span className="text-muted-foreground font-normal">
+          <span className="font-normal text-muted-foreground">
             ({items.length})
           </span>
         </div>
@@ -123,7 +133,9 @@ export function CodeReview({ code, language }: CodeReviewProps) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, language }),
       });
-      if (!response.ok) throw new Error("Failed to get review");
+      if (!response.ok) {
+        throw new Error("Failed to get review");
+      }
       const data = await response.json();
       setReview(data);
     } catch {
@@ -136,12 +148,12 @@ export function CodeReview({ code, language }: CodeReviewProps) {
   return (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <div className="flex items-center justify-between border-b border-white/10 px-3 py-2">
+      <div className="flex items-center justify-between border-white/10 border-b px-3 py-2">
         <div className="flex items-center gap-2">
           <div className="flex size-6 items-center justify-center rounded-md bg-green-500/20">
             <Sparkles className="size-3 text-green-400" />
           </div>
-          <span className="text-xs font-semibold">AI Code Review</span>
+          <span className="font-semibold text-xs">AI Code Review</span>
         </div>
         <span className="text-[10px] text-muted-foreground">
           {language || "No language"}
@@ -152,14 +164,14 @@ export function CodeReview({ code, language }: CodeReviewProps) {
       <div className="flex flex-1 flex-col gap-3 overflow-y-auto p-3">
         {/* Review Button */}
         <button
-          onClick={runReview}
-          disabled={isLoading}
           className={cn(
-            "flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-xs font-semibold transition-colors",
+            "flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 font-semibold text-xs transition-colors",
             isLoading
-              ? "bg-muted text-muted-foreground cursor-not-allowed"
+              ? "cursor-not-allowed bg-muted text-muted-foreground"
               : "bg-green-500 text-white hover:bg-green-600"
           )}
+          disabled={isLoading}
+          onClick={runReview}
         >
           {isLoading ? (
             <>
@@ -176,7 +188,7 @@ export function CodeReview({ code, language }: CodeReviewProps) {
 
         {/* Error */}
         {error && (
-          <div className="rounded-lg border border-red-500/20 bg-red-500/10 px-3 py-2 text-xs text-red-400">
+          <div className="rounded-lg border border-red-500/20 bg-red-500/10 px-3 py-2 text-red-400 text-xs">
             {error}
           </div>
         )}
@@ -191,12 +203,19 @@ export function CodeReview({ code, language }: CodeReviewProps) {
                   <p className="text-[10px] text-muted-foreground uppercase tracking-wide">
                     Code Quality Score
                   </p>
-                  <p className={cn("text-3xl font-bold mt-1", scoreColor(review.score))}>
+                  <p
+                    className={cn(
+                      "mt-1 font-bold text-3xl",
+                      scoreColor(review.score)
+                    )}
+                  >
                     {review.score}
-                    <span className="text-sm font-normal text-muted-foreground">/100</span>
+                    <span className="font-normal text-muted-foreground text-sm">
+                      /100
+                    </span>
                   </p>
                 </div>
-                <div className="size-12 rounded-full border-2 border-white/10 flex items-center justify-center">
+                <div className="flex size-12 items-center justify-center rounded-full border-2 border-white/10">
                   {review.score >= 80 ? (
                     <CheckCircle className="size-6 text-green-400" />
                   ) : review.score >= 60 ? (
@@ -206,24 +225,30 @@ export function CodeReview({ code, language }: CodeReviewProps) {
                   )}
                 </div>
               </div>
-              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+              <p className="mt-2 text-muted-foreground text-xs leading-relaxed">
                 {review.summary}
               </p>
             </div>
 
             {/* Bugs */}
             <Section
-              title="Bugs"
               icon={<Bug className="size-3 text-red-400" />}
               items={review.bugs}
               renderItem={(item, i) => (
-                <div key={i} className="px-3 py-2 text-xs">
+                <div className="px-3 py-2 text-xs" key={i}>
                   <div className="flex items-center gap-2">
-                    <span className={cn("font-semibold uppercase text-[10px]", severityColor(item.severity))}>
+                    <span
+                      className={cn(
+                        "font-semibold text-[10px] uppercase",
+                        severityColor(item.severity)
+                      )}
+                    >
                       {item.severity}
                     </span>
                     {item.line && (
-                      <span className="text-muted-foreground">Line {item.line}</span>
+                      <span className="text-muted-foreground">
+                        Line {item.line}
+                      </span>
                     )}
                   </div>
                   <p className="mt-1">{item.description}</p>
@@ -232,51 +257,59 @@ export function CodeReview({ code, language }: CodeReviewProps) {
                   )}
                 </div>
               )}
+              title="Bugs"
             />
 
             {/* Improvements */}
             <Section
-              title="Improvements"
               icon={<Lightbulb className="size-3 text-yellow-400" />}
               items={review.improvements}
               renderItem={(item, i) => (
-                <div key={i} className="px-3 py-2 text-xs">
+                <div className="px-3 py-2 text-xs" key={i}>
                   <p>{item.description}</p>
                   {item.example && (
-                    <pre className="mt-1 rounded bg-black/30 p-2 text-green-400 overflow-x-auto">
+                    <pre className="mt-1 overflow-x-auto rounded bg-black/30 p-2 text-green-400">
                       {item.example}
                     </pre>
                   )}
                 </div>
               )}
+              title="Improvements"
             />
 
             {/* Best Practices */}
             <Section
-              title="Best Practices"
               icon={<CheckCircle className="size-3 text-blue-400" />}
               items={review.bestPractices}
               renderItem={(item, i) => (
-                <div key={i} className="flex items-start gap-2 px-3 py-2 text-xs">
+                <div
+                  className="flex items-start gap-2 px-3 py-2 text-xs"
+                  key={i}
+                >
                   {item.passed ? (
-                    <CheckCircle className="size-3 mt-0.5 shrink-0 text-green-400" />
+                    <CheckCircle className="mt-0.5 size-3 shrink-0 text-green-400" />
                   ) : (
-                    <XCircle className="size-3 mt-0.5 shrink-0 text-red-400" />
+                    <XCircle className="mt-0.5 size-3 shrink-0 text-red-400" />
                   )}
                   <p>{item.description}</p>
                 </div>
               )}
+              title="Best Practices"
             />
 
             {/* Security */}
             <Section
-              title="Security"
               icon={<Shield className="size-3 text-purple-400" />}
               items={review.security}
               renderItem={(item, i) => (
-                <div key={i} className="px-3 py-2 text-xs">
+                <div className="px-3 py-2 text-xs" key={i}>
                   <div className="flex items-center gap-2">
-                    <span className={cn("font-semibold uppercase text-[10px]", severityColor(item.severity))}>
+                    <span
+                      className={cn(
+                        "font-semibold text-[10px] uppercase",
+                        severityColor(item.severity)
+                      )}
+                    >
                       {item.severity}
                     </span>
                   </div>
@@ -286,6 +319,7 @@ export function CodeReview({ code, language }: CodeReviewProps) {
                   )}
                 </div>
               )}
+              title="Security"
             />
           </div>
         )}

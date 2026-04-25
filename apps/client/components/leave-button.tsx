@@ -1,4 +1,3 @@
-
 import { LogOut } from "lucide-react";
 import { type FocusEvent, useRef } from "react";
 import { LeaveDialog, type LeaveDialogRef } from "@/components/leave-dialog";

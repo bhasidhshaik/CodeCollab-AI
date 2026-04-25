@@ -1,4 +1,3 @@
-
 export interface GridConfig {
   cellSize: number;
   cols: number;

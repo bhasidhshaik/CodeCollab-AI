@@ -1,4 +1,3 @@
-
 import type { ExecutionResult } from "@codex/types/terminal";
 
 import { cn } from "@/lib/utils";

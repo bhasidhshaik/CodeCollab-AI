@@ -1,4 +1,3 @@
-
 interface StorageData {
   followUserId: string | null;
   roomId: string | null;

@@ -1,4 +1,3 @@
-
 import type { CommitResponse } from "@/components/repo-browser/types/github";
 import {
   type ExtendedTreeDataItem,

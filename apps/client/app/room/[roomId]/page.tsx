@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { CodeServiceMsg, RoomServiceMsg } from "@codex/types/message";
@@ -19,9 +17,8 @@ import {
 } from "react";
 import { toast } from "sonner";
 import { useDebounce } from "use-debounce";
-
-import { CodeEditor } from "@/components/code-editor";
 import { AiChat } from "@/components/ai-chat";
+import { CodeEditor } from "@/components/code-editor";
 import { CodeReview } from "@/components/code-review";
 import { FollowUser } from "@/components/follow-user";
 import { LeaveButton } from "@/components/leave-button";
@@ -67,7 +64,7 @@ const MemoizedToolbar = memo(function MemoizedToolbar({
   setShowTerminal,
   setShowWebcam,
   setShowLivePreview,
-   showAiChat,
+  showAiChat,
   setShowAiChat,
   showCodeReview,
   setShowCodeReview,
@@ -98,17 +95,17 @@ const MemoizedToolbar = memo(function MemoizedToolbar({
         className="animate-fade-in-top"
         role="group"
       >
-       <Toolbar
+        <Toolbar
           editor={editor}
           monaco={monaco}
           setShowAiChat={setShowAiChat}
-          showAiChat={showAiChat}
           setShowCodeReview={setShowCodeReview}
-          showCodeReview={showCodeReview}
           setShowLivePreview={setShowLivePreview}
           setShowNotepad={setShowNotepad}
           setShowTerminal={setShowTerminal}
           setShowWebcam={setShowWebcam}
+          showAiChat={showAiChat}
+          showCodeReview={showCodeReview}
           showLivePreview={showLivePreview}
           showNotepad={showNotepad}
           showTerminal={showTerminal}
@@ -325,15 +322,15 @@ export default function Room() {
             monaco={monaco}
             roomId={roomId || ""}
             setOutput={setOutput}
+            setShowAiChat={setShowAiChat}
+            setShowCodeReview={setShowCodeReview}
             setShowLivePreview={setShowLivePreview}
             setShowNotepad={setShowNotepad}
             setShowTerminal={setShowTerminal}
             setShowWebcam={setShowWebcam}
-            setShowAiChat={setShowAiChat}
             showAiChat={showAiChat}
-            showLivePreview={showLivePreview}
-            setShowCodeReview={setShowCodeReview}
             showCodeReview={showCodeReview}
+            showLivePreview={showLivePreview}
             showNotepad={showNotepad}
             showTerminal={showTerminal}
             showWebcam={showWebcam}

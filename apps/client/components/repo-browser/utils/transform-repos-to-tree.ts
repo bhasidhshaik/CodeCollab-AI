@@ -1,4 +1,3 @@
-
 import { Folder } from "lucide-react";
 
 import type { GithubRepo } from "../types/github";

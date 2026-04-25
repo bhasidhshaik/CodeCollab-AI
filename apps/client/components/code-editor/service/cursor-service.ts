@@ -1,4 +1,3 @@
-
 import type { Cursor } from "@codex/types/operation";
 
 import type { Monaco } from "@monaco-editor/react";

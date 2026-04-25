@@ -1,4 +1,3 @@
-
 import { RoomServiceMsg, StreamServiceMsg } from "@codex/types/message";
 import { useEffect, useRef } from "react";
 import type Peer from "simple-peer";

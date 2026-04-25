@@ -1,4 +1,3 @@
-
 import { ButtonWithTooltip, type MDXEditorMethods } from "@mdxeditor/editor";
 import { Download } from "lucide-react";
 import type { RefObject } from "react";

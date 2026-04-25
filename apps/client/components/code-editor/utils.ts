@@ -1,4 +1,3 @@
-
 /**
  * Create a style for a cursor.
  * @param userID - User identifier for the cursor

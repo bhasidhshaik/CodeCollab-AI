@@ -1,4 +1,3 @@
-
 import { CodeServiceMsg } from "@codex/types/message";
 import type { ExecutionResult } from "@codex/types/terminal";
 import type { Monaco } from "@monaco-editor/react";
