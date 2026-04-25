@@ -4,18 +4,27 @@ set -e
 echo "=== Installing pnpm ==="
 npm install -g pnpm
 
-echo "=== pnpm version ==="
-pnpm --version
-
 echo "=== Installing dependencies ==="
-pnpm install --no-frozen-lockfile --reporter=verbose 2>&1 || true
+pnpm install --no-frozen-lockfile --ignore-scripts
 
-echo "=== Trying again with more info ==="
-pnpm install --no-frozen-lockfile --ignore-scripts 2>&1 || echo "Install failed"
-
-echo "=== Building server directly ==="
+echo "=== Installing server deps with scripts ==="
 cd apps/server
-echo "=== Installing server deps directly ==="
-pnpm install --no-frozen-lockfile 2>&1 || echo "Server install failed"
+pnpm install --no-frozen-lockfile
+cd ../..
 
-echo "=== Done ==="
+echo "=== Installing types package ==="
+cd packages/types
+pnpm install --no-frozen-lockfile
+cd ../..
+
+echo "=== Building types ==="
+cd packages/types
+npx tsc 2>/dev/null || true
+cd ../..
+
+echo "=== Building server ==="
+cd apps/server
+npx tsc -p tsconfig.prod.json
+npx tsc-alias -p tsconfig.prod.json
+echo "=== Server built successfully ==="
+ls -la dist/
