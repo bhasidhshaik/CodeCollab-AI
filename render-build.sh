@@ -12,12 +12,13 @@ node -e "
 const fs = require('fs');
 const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 delete pkg.dependencies['@codex/types'];
+pkg.devDependencies['@types/simple-peer'] = '^9.11.8';
 fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+console.log('Patched!');
 "
 
-echo "=== npm install ==="
+echo "=== npm install (single install) ==="
 npm install --legacy-peer-deps --include=dev
-npm install @types/simple-peer --save-dev --legacy-peer-deps
 
 echo "=== Copy types ==="
 mkdir -p node_modules/@codex/types
