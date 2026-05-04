@@ -39,7 +39,7 @@ const LanguageSelection = memo(
   ({
     monaco,
     editor,
-    defaultLanguage = "html",
+    defaultLanguage = "javascript",
     className,
   }: LanguageSelectionProps) => {
     const socket = useMemo(() => getSocket(), []);
@@ -47,21 +47,26 @@ const LanguageSelection = memo(
     const [open, setOpen] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(defaultLanguage);
 
-    // Memoize languages array to prevent unnecessary recalculations
-    const languages = useMemo(() => {
-      if (!monaco) {
-        return [];
-      }
+const SUPPORTED_LANGUAGES = new Set([
+  "python", "javascript", "typescript", "java", "c", "c++", "c#",
+  "go", "rust", "kotlin", "ruby", "swift", "php", "scala", "r",
+  "dart", "shell", "bash", "sql", "mysql", "haskell", "lua"
+]);
 
-      return monaco.languages.getLanguages().map(
-        (language) =>
-          ({
-            alias: language.aliases?.[0] || "Unknown",
-            extensions: language.extensions || [],
-            id: language.id,
-          }) as Language
-      );
-    }, [monaco]);
+const languages = useMemo(() => {
+  if (!monaco) return [];
+
+  return monaco.languages
+    .getLanguages()
+    .map((language) => ({
+      alias: language.aliases?.[0] || "Unknown",
+      extensions: language.extensions || [],
+      id: language.id,
+    }) as Language)
+    .filter((language) =>
+      SUPPORTED_LANGUAGES.has(language.alias.toLowerCase())
+    );
+}, [monaco]);
 
     const handleSelect = useCallback(
       (currentValue: string) => {

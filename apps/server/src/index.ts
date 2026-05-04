@@ -1,4 +1,3 @@
-import { createServer } from "http";
 import {
   CodeServiceMsg,
   PointerServiceMsg,
@@ -14,6 +13,7 @@ import type {
   ServerToClientEvents,
 } from "@codex/types/socket-events";
 import type { ExecutionResult } from "@codex/types/terminal";
+import { createServer } from "http";
 import type { SignalData } from "simple-peer";
 import { Server } from "socket.io";
 
